@@ -1,0 +1,16 @@
+**/app/build/
+**/app/src/androidTest/
+**/app/src/test/
+
+**/gradle/
+**/.gradle/
+
+**/build.gradle.kts
+**/gradle.properties
+**/gradlew
+**/gradlew.bat
+**/local.properties
+**/settings.gradle.kts
+
+**/.idea/
+**/.DS_Store

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/btn_point"
+          android:title="@string/point"
+          android:checkable="true" />
+
+    <item android:id="@+id/btn_line"
+          android:title="@string/line"
+          android:checkable="true" />
+
+    <item android:id="@+id/btn_rectangle"
+          android:title="@string/rectangle"
+          android:checkable="true" />
+
+    <item android:id="@+id/btn_ellipse"
+          android:title="@string/ellipse"
+          android:checkable="true" />
+</menu>

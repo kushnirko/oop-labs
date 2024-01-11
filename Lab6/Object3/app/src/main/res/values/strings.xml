@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Object3</string>
+    
+    <string name="determinant_title">Визначник матриці</string>
+</resources>

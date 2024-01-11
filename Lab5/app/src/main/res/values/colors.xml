@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#D7D7D7</color>
+    <color name="dark_gray">#969696</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="forest_green_dark">#0E3D3C</color>
+    <color name="forest_green_light">#1A6D50</color>
+    <color name="mint_green_dark">#3EB489</color>
+    <color name="mint_green_light">#72DAAE</color>
+    <color name="yellow_dark">#FAB244</color>
+    <color name="yellow_light">#FECA54</color>
+    <color name="red_dark">#A70000</color>
+    <color name="red">#FF0000</color>
+    <color name="red_light">#FF5252</color>
+
+    <!-- MainToolbar colors -->
+    <color name="main_toolbar_background_color">@color/forest_green_light</color>
+    <color name="on_main_toolbar_color">@color/white</color>
+    <color name="app_name_text_color">@color/yellow_light</color>
+    <color name="on_main_toolbar_selected_btn_icon_color">@color/yellow_light</color>
+
+    <!-- ObjectsToolbar colors -->
+    <color name="objects_toolbar_background_color">@color/mint_green_dark</color>
+    <color name="on_objects_toolbar_color">@color/black</color>
+
+    <!-- Colors of buttons on ObjectsToolbar -->
+    <color name="pressed_btn_background_color">#33000000</color>
+    <color name="pressed_btn_icon_color">@color/black</color>
+    <color name="selected_btn_background_color">#26000000</color>
+    <color name="selected_btn_icon_color">@color/red</color>
+
+    <!-- Tooltip colors -->
+    <color name="tooltip_background_color">#BF000000</color>
+    <color name="tooltip_bnt_text_color">@color/yellow_light</color>
+    <color name="tooltip_bnt_clicked_text_color">@color/yellow_dark</color>
+
+    <!-- Colors available for painting -->
+    <color name="yellow">#FFFF00</color>
+    <color name="light_green">#00FF00</color>
+    <color name="blue">#00FFFF</color>
+    <color name="dark_blue">#0000FF</color>
+    <color name="pink">#FF00FF</color>
+    <color name="orange">#FF8000</color>
+    <color name="gray">#C0C0C0</color>
+
+    <!-- Selected shape colors -->
+    <color name="selected_outline_color">#AB00FF</color>
+    <color name="selected_filling_color">#809B37CC</color>
+
+    <!-- Dialogs -->
+    <color name="dialog_primary_color">@color/white</color>
+    <color name="dialog_secondary_color">@color/forest_green_light</color>
+    <color name="dialog_on_secondary_color">@color/white</color>
+    <color name="dialog_on_secondary_btn_text_color">@color/yellow_light</color>
+
+    <!-- Files dialog -->
+    <color name="files_dialog_default_row_bg_color">@color/white</color>
+    <color name="files_dialog_selected_row_bg_color">@color/light_gray</color>
+
+    <!-- Table colors -->
+    <color name="table_row_text_color">@color/black</color>
+    <color name="table_default_row_bg_color_1">@color/white</color>
+    <color name="table_default_row_bg_color_2">@color/light_gray</color>
+    <color name="table_selected_row_bg_color_1">#FAA3A3</color>
+    <color name="table_selected_row_bg_color_2">#FF7D78</color>
+</resources>

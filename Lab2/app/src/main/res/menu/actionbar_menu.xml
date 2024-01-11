@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/btn_file"
+          android:title="@string/file"
+          app:showAsAction="always" />
+
+    <item android:id="@+id/btn_objects"
+          android:title="@string/objects"
+          app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/btn_info"
+          android:title="@string/info"
+          app:showAsAction="always" />
+</menu>

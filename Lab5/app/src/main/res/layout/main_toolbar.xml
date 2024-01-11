@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oop.lab5.main_toolbar.MainToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/main_toolbar_background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/current_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_name_text_color" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_undo"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_undo"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_btn"
+            app:tint="@color/on_main_toolbar_color"
+            android:contentDescription="@string/undo" />
+
+        <ImageButton
+            android:id="@+id/btn_clear_all"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_clear_all"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_btn"
+            app:tint="@color/on_main_toolbar_color"
+            android:contentDescription="@string/clear_all" />
+
+        <ImageButton
+            android:id="@+id/btn_table"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_table"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_btn"
+            app:tint="@color/on_main_toolbar_color"
+            android:contentDescription="@string/show_hide_table" />
+
+        <ImageButton
+            android:id="@+id/btn_options"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_options"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_btn"
+            app:tint="@color/on_main_toolbar_color"
+            android:contentDescription="@string/options" />
+    </LinearLayout>
+</com.oop.lab5.main_toolbar.MainToolbar>

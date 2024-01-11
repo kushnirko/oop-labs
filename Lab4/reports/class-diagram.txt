@@ -1,0 +1,197 @@
+@startuml
+
+class "<b>Lab4</b>" {
+    - editor: MyEditor
+    - mainToolbar: MainToolbar
+    - objectsToolbar: ObjectsToolbar
+    
+    - onObjSelect(shape: Shape)
+    - onObjCancel()
+}
+
+package shape {
+abstract Shape {
+    + name: String
+    + associatedIds: MutableMap<String, Int>
+    # startX: Float
+    # startY: Float
+    # endX: Float
+    # endY: Float
+
+    + setStart(x: Float, y: Float)
+    + setEnd(x: Float, y: Float)
+    + isValid(): Boolean
+    + getInstance(): Shape
+    # getOutlinePaint(): Paint
+    # getFillingPaint(): Paint
+    # getRubberTracePaint(): Paint
+    + show(canvas: Canvas, outlinePaint: Paint, fillingPaint: Paint?)
+    + showDefault(canvas: Canvas)
+    + showRubberTrace(canvas: Canvas)
+}
+class "<b>PointShape</b>"
+class "<b>LineShape</b>"
+class "<b>RectShape</b>"
+class "<b>EllipseShape</b>"
+class "<b>SegmentShape</b>"
+class "<b>CuboidShape</b>"
+
+interface "<b>LineShapeInterface</b>" <<interface>> {
+    + lineShapeShow(ctx: Context, cnv: Canvas, p: Paint, sP: PointF, eP: PointF)
+}
+interface "<b>RectShapeInterface</b>" <<interface>> {
+    + rectShapeShow(ctx: Context, cnv: Canvas, oP: Paint, fP: Paint?, r: RectF)
+}
+interface "<b>EllipseShapeInterface</b>" <<interface>> {
+    + ellipseShapeShow(ctx: Context, cnv: Canvas, oP: Paint, fP: Paint?, cP: PointF, r: Float)
+}
+
+"<b>PointShape</b>" -u-|> Shape
+"<b>LineShape</b>" -u-|> Shape
+"<b>RectShape</b>" -u-|> Shape
+"<b>EllipseShape</b>" -u-|> Shape
+"<b>SegmentShape</b>" -u-|> Shape
+"<b>CuboidShape</b>" -u-|> Shape
+
+"<b>SegmentShape</b>" .d.|> "<b>LineShapeInterface</b>"
+"<b>SegmentShape</b>" .u.|> "<b>EllipseShapeInterface</b>"
+
+"<b>CuboidShape</b>" .d.|> "<b>LineShapeInterface</b>"
+"<b>CuboidShape</b>" .d.|> "<b>RectShapeInterface</b>"
+}
+
+package my_editor {
+interface "<b>PaintMessagesHandler</b>" <<interface>> {
+    + isRubberTraceModeOn: Boolean
+
+    + onFingerTouch(x: Float, y: Float)
+    + onFingerMove(x: Float, y: Float)
+    + onFingerRelease()
+    + onPaint()
+}
+class "<b>MyEditor</b>" {
+    + paintUtils: PaintUtils
+    + shapes: Array<Shape>
+    + currentShape: Shape?
+    - drawnShapes: MutableList<Shape>
+
+    + start(shape: Shape)
+    + close()
+    + undo()
+    + clearAll()
+}
+"<b>MyEditor</b>" .|> "<b>PaintMessagesHandler</b>"
+}
+
+package paint_view {
+interface "<b>PaintUtils</b>" <<interface>> {
+    + drawnShapesCanvas: Canvas
+    + rubberTraceCanvas: Canvas
+
+    + repaint()
+    + clearCanvas(canvas: Canvas)
+}
+class "<b>PaintView</b>" {
+    + handler: PaintMessagesHandler
+    - drawnShapesBitmap: Bitmap
+    - rubberTraceBitmap: Bitmap
+}
+
+"<b>PaintView</b>" .d.|> "<b>PaintUtils</b>"
+}
+
+package main_toolbar {
+class "<b>MainToolbar</b>" {
+    - optionsMenu: PopupMenu
+    - fileSubmenu: PopupMenu
+    - objSubmenu: PopupMenu
+    - editor: MyEditor
+    - objSubmenuItems: Array<MenuItem>
+    - onObjSelectListener: Function
+    - onObjCancelListener: Function
+    - currentObjTextView: TextView
+
+    + onCreate(editor: MyEditor)
+    - createOptionsMenu(anchor: View): PopupMenu
+    - createFileSubmenu(anchor: View): PopupMenu
+    - createObjSubmenu(anchor: View): PopupMenu
+    + setObjListeners(sl: Function, cl: Function)
+    + onObjSelect(shape: Shape)
+    + onObjCancel()
+}
+}
+
+package objects_toolbar {
+class "<b>ObjectsToolbar</b>" {
+    - editor: MyEditor
+    - objButtons: Array<ObjectButton>
+    - onObjSelectListener: Function
+    - onObjCancelListener: Function
+
+    + onCreate(editor: MyEditor)
+    + setObjListeners(sl: Function, cl: Function)
+    + onObjSelect(shape: Shape)
+    + onObjCancel()
+}
+class "<b>ObjectButton</b>" {
+    - shape: Shape
+    - isObjSelected: Boolean
+    - onObjSelectListener: Function
+    - onObjCancelListener: Function
+    - selectTooltip: Tooltip
+    - cancelTooltip: Tooltip
+    - timeOfLongPress: Int = 1000
+    - pressStartTime: Long
+    - pressEndTime: Long
+
+    + onCreate(shape: Shape)
+    - markPressed()
+    - markNotPressed()
+    - markSelected()
+    - markNotSelected()
+    + setObjListeners(sl: Function, cl: Function)
+    + onObjSelect()
+    + onObjCancel()
+}
+
+"<b>ObjectButton</b>" -* "<b>ObjectsToolbar</b>"
+}
+
+package tooltip {
+class "<b>Tooltip</b>" {
+    - tooltip: Snackbar
+    
+    + create(parent: View, text: String): Tooltip
+    + hide()
+    + show()
+}
+}
+
+Shape <.d. "<b>MyEditor</b>"
+Shape <-l- "<b>MainToolbar</b>"
+Shape <-l- "<b>ObjectsToolbar</b>"
+Shape <.l. "<b>ObjectButton</b>"
+Shape <-u- "<b>Lab4</b>"
+
+"<b>PointShape</b>" -d-* "<b>MyEditor</b>"
+"<b>LineShape</b>" -d-* "<b>MyEditor</b>"
+"<b>RectShape</b>" -d-* "<b>MyEditor</b>"
+"<b>EllipseShape</b>" -d-* "<b>MyEditor</b>"
+"<b>SegmentShape</b>" -d-* "<b>MyEditor</b>"
+"<b>CuboidShape</b>" -d-* "<b>MyEditor</b>"
+
+"<b>PaintMessagesHandler</b>" -r-* "<b>PaintView</b>"
+"<b>PaintUtils</b>" -l-* "<b>MyEditor</b>"
+"<b>PaintView</b>" <-u- "<b>Lab4</b>"
+
+"<b>MyEditor</b>" -u-* "<b>Lab4</b>"
+"<b>MyEditor</b>" -u-* "<b>MainToolbar</b>"
+"<b>MyEditor</b>" -r-* "<b>ObjectsToolbar</b>"
+
+"<b>MainToolbar</b>" -u-* "<b>Lab4</b>"
+"<b>ObjectsToolbar</b>" -u-* "<b>Lab4</b>"
+
+"<b>Tooltip</b>" -u-* "<b>MainToolbar</b>"
+"<b>Tooltip</b>" -u-* "<b>ObjectButton</b>"
+
+@enduml

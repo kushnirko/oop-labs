@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string
+        name="dialog_name_module3"
+        >Діалогове вікно модуля 3</string>
+    <string
+        name="btn_back_module3"
+        >&lt; Назад</string>
+    <string
+        name="btn_confirm_module3"
+        >Так</string>
+    <string
+        name="btn_cancel_module3"
+        >Відміна</string>
+</resources>

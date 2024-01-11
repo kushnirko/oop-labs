@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lab6</string>
+
+    <string name="btn_complete_task_text">Виконати завдання</string>
+    <string name="dialog_header_text">Введіть необхідні дані</string>
+
+    <string name="dialog_n">n</string>
+    <string name="dialog_min">Min</string>
+    <string name="dialog_max">Max</string>
+    <string name="dialog_colon">:</string>
+    <string name="default_n_text">1, 2, 3, …</string>
+    <string name="default_min_text">…, -1, 0, 1, …</string>
+    <string name="default_max_text">…, -1, 0, 1, …</string>
+
+    <string name="cancel">Скасувати</string>
+    <string name="okay">Добре</string>
+</resources>

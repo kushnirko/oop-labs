@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/table_shape_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text=""
+        android:textColor="@color/table_row_text_color" />
+
+    <TextView
+        android:id="@+id/table_x1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/table_row_text_color"/>
+
+    <TextView
+        android:id="@+id/table_y1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/table_row_text_color" />
+
+    <TextView
+        android:id="@+id/table_x2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/table_row_text_color"/>
+
+    <TextView
+        android:id="@+id/table_y2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text=""
+        android:textColor="@color/table_row_text_color" />
+</TableRow>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oop.lab3.main_toolbar.MainToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/main_toolbar_background_color">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/current_object"
+        android:textSize="14sp"
+        android:textColor="?attr/colorOnPrimary" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_triangle_right"
+        app:tint="?attr/colorOnPrimary"
+        android:contentDescription="@string/triangle_right_description" />
+
+    <ImageButton
+        android:id="@+id/btn_options"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_options"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn_shape"
+        app:tint="?attr/colorOnPrimary"
+        android:contentDescription="@string/three_dots_description" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/current_object"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/default_current_object_text"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/current_object_text_color" />
+    </LinearLayout>
+</com.oop.lab3.main_toolbar.MainToolbar>

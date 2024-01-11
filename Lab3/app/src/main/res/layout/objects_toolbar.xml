@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oop.lab3.objects_toolbar.ObjectsToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/objects_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/objects_toolbar_background_color">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="8dp">
+
+        <com.oop.lab3.objects_toolbar.ObjectButton
+            android:id="@+id/btn_point"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_point"
+            android:scaleType="fitXY"
+            android:background="@drawable/btn_shape"
+            app:tint="?attr/colorOnSecondary"
+            android:contentDescription="@string/point" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+
+        <com.oop.lab3.objects_toolbar.ObjectButton
+            android:id="@+id/btn_line"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_line"
+            android:scaleType="fitXY"
+            android:background="@drawable/btn_shape"
+            app:tint="?attr/colorOnSecondary"
+            android:contentDescription="@string/line" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+
+        <com.oop.lab3.objects_toolbar.ObjectButton
+            android:id="@+id/btn_rectangle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_rectangle"
+            android:scaleType="fitXY"
+            android:background="@drawable/btn_shape"
+            app:tint="?attr/colorOnSecondary"
+            android:contentDescription="@string/rectangle" />
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+
+        <com.oop.lab3.objects_toolbar.ObjectButton
+            android:id="@+id/btn_ellipse"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_ellipse"
+            android:scaleType="fitXY"
+            android:background="@drawable/btn_shape"
+            app:tint="?attr/colorOnSecondary"
+            android:contentDescription="@string/ellipse" />
+    </LinearLayout>
+</com.oop.lab3.objects_toolbar.ObjectsToolbar>

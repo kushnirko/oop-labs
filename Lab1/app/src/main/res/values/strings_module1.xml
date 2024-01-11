@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string
+        name="dialog_name_module1"
+        >Діалогове вікно модуля 1</string>
+    <string
+        name="current_number_module1"
+        >Виберіть число</string>
+    <string
+        name="btn_confirm_module1"
+        >Так</string>
+    <string
+        name="btn_cancel_module1"
+        >Відміна</string>
+</resources>

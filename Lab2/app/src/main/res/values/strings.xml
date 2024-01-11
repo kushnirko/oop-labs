@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lab2</string>
+    <!-- Кнопки на верхній панелі активності -->
+    <string name="file">Файл</string>
+    <string name="objects">Об\'єкти</string>
+    <string name="info">Довідка</string>
+
+    <!-- Опції, що з'являться після натискання кнопки "Об'єкти" -->
+    <string name="point">Крапка</string>
+    <string name="line">Лінія</string>
+    <string name="rectangle">Прямокутник</string>
+    <string name="ellipse">Еліпс</string>
+</resources>

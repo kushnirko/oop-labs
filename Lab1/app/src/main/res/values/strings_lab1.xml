@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string
+        name="app_name_lab1"
+        >Lab1</string>
+    <string
+        name="btn_work1_menu_lab1"
+        >Робота1</string>
+    <string
+        name="btn_work2_menu_lab1"
+        >Робота2</string>
+    <string
+        name="selected_number_lab1"
+        >Ви ще не вибрали ніякого числа</string>
+</resources>

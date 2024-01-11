@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="drawings_dir_name">Малюнки</string>
+    <string name="default_short_file_name">Малюнок</string>
+    <string name="file_extension">.lab5.txt</string>
+
+    <!-- Universal strings -->
+    <string name="file">Файл</string>
+    <string name="files">Файли</string>
+    <string name="objects">Об\'єкти</string>
+    <string name="info">Довідка</string>
+    <string name="okay">Добре</string>
+    <string name="undo">Назад</string>
+    <string name="redo">Вперед</string>
+    <string name="hide">Сховати</string>
+    <string name="cancel">Скасувати</string>
+    <string name="clear_all">Очистити все</string>
+    <string name="delete">Видалити</string>
+    <string name="open">Відкрити</string>
+    <string name="save">Зберегти</string>
+    <string name="save_as">Зберегти як</string>
+    <string name="options">Опції</string>
+
+    <!-- Table actions -->
+    <string name="show_hide_table">Показати/сховати таблицю</string>
+
+    <!-- File actions -->
+    <string name="enter_file_name">Введіть назву файлу</string>
+
+    <!-- Objects -->
+    <string name="point">Крапка</string>
+    <string name="line">Лінія</string>
+    <string name="rectangle">Прямокутник</string>
+    <string name="ellipse">Еліпс</string>
+    <string name="segment">Відрізок</string>
+    <string name="cuboid">Кубоїд</string>
+
+    <!-- Tooltip -->
+    <string name="tooltip_icon_description">Значок підказки</string>
+
+    <!-- MyTable -->
+    <string name="name">Назва</string>
+    <string name="start_x">x1</string>
+    <string name="start_y">y1</string>
+    <string name="end_x">x2</string>
+    <string name="end_y">y2</string>
+    <string name="table_default_text">Полотно поки порожнє</string>
+
+    <!-- Files dialog -->
+    <string name="files_dialog_default_text">Ще немає файлів</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="table_content_height">120dp</dimen>
+    <dimen name="dialogs_width">280dp</dimen>
+    <dimen name="files_dialog_content_height">200dp</dimen>
+</resources>

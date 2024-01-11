@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Lab4</string>
+
+    <!-- Options from main_toolbar_options_menu -->
+    <string name="file">Файл</string>
+    <string name="objects">Об\'єкти</string>
+    <string name="info">Довідка</string>
+
+    <!-- Other main_toolbar_options_menu content -->
+    <string name="current_object">Поточний\nоб\'єкт</string>
+    <string name="triangle_right_description">Вказує на поточний об\'єкт</string>
+    <string name="default_current_object_text">Ще не вибрано</string>
+    <string name="three_dots_description">Опції</string>
+
+    <!-- Options from main_toolbar_file_submenu -->
+    <string name="undo">Назад</string>
+    <string name="clear_all">Очистити все</string>
+
+    <!-- Objects -->
+    <string name="point">Крапка</string>
+    <string name="line">Лінія</string>
+    <string name="rectangle">Прямокутник</string>
+    <string name="ellipse">Еліпс</string>
+    <string name="segment">Відрізок</string>
+    <string name="cuboid">Кубоїд</string>
+
+    <!-- Tooltip -->
+    <string name="tooltip_description">Підказка для кнопки вибору об\'єкта малювання</string>
+    <string name="tooltip_icon_description">Значок підказки</string>
+    <string name="tooltip_hide">Сховати</string>
+</resources>

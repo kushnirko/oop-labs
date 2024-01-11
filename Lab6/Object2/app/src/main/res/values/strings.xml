@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Object2</string>
+
+    <string name="matrix_title">Згенерована матриця</string>
+</resources>
