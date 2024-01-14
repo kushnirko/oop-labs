@@ -1,16 +1,22 @@
+# Unused folders of Android project
 **/app/build/
 **/app/src/androidTest/
 **/app/src/test/
 
+# Gradle folders
 **/gradle/
 **/.gradle/
 
-**/build.gradle.kts
+# Gradle files
 **/gradle.properties
 **/gradlew
 **/gradlew.bat
 **/local.properties
+**/proguard-rules.pro
 **/settings.gradle.kts
 
+# JetBrains IDEs folder for project-specific settings
 **/.idea/
+
+# macOS file that stores custom attributes of its containing folder
 **/.DS_Store
